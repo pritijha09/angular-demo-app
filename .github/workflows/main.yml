@@ -31,9 +31,4 @@ jobs:
       #   run: npm run test -- --watch=false --browsers=ChromeHeadless
 
       - name: Build application
-        run: npm run build -- --configuration production --base-href=/${{ github.event.repository.name }}/
-
-      - name: Deploy to GitHub Pages
-        run: |
-          npm install -g angular-cli-ghpages
-          angular-cli-ghpages --dir=dist/angular-demo-app
+        run: npm run build -- --configuration production
